@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2022 at 01:51 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: Aug 15, 2022 at 04:13 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,11 +48,11 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `kode_buku`, `isbn`, `judul`, `slug`, `penerbit`, `pengarang`, `category_id`, `jumlah`, `rak`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'BK0001', '9788925285641', 'One Piece', 'one-piece', 'Gramedia', 'Echiiro Oda', 1, 1, 'Komik', 'assets/gallery/DzYdb7nkXbuJS3zj3yyb4sxts3zjz9p50oZToKLq.jpg', '2022-02-03 08:56:34', '2022-04-01 22:49:25'),
+(1, 'BK0001', '9788925285641', 'One Piece', 'one-piece', 'Gramedia', 'Echiiro Oda', 1, 2, 'Komik', 'assets/gallery/jGpgtw1GfKGWgk5P64iZkia1w3DtcioCxqF933RS.png', '2022-02-03 08:56:34', '2022-08-15 04:47:11'),
 (2, 'BK0002', '9781593077440', 'Berserk', 'berserk', 'Elex Media', 'Kentaro Miura', 1, 2, 'Komik', 'assets/gallery/OpvAMlptTeTcTAPAzXeABEQYEh2BbOBFVpUPQpND.jpg', '2022-02-03 08:57:00', '2022-03-13 00:40:21'),
 (3, 'BK0003', '9786020287256', 'Crayon sinchan 46', 'crayon-sinchan-46', 'Appolo-surabaya', 'Lusiana wijaya', 1, 1, 'Komik', 'assets/gallery/x7eTiioXkc4hL8yCUtTmZWPdA6LnK04ncoAKa5KA.jpg', '2022-02-04 12:11:43', '2022-03-23 02:35:33'),
-(4, 'BK0004', NULL, 'Seribu Daun', 'seribu-daun', 'I Gusti Made Dwi Wiguna', 'I Gusti Made Dwi Wiguna', 3, 0, 'Dongeng', 'assets/gallery/cb3Sc5AlnCu424zicpiV7CItKJyANApOm7QrGI98.jpg', '2022-02-05 10:40:24', '2022-03-17 03:15:03'),
-(5, 'BK0005', '9780439684026', 'Has a Heart (Magic School Bus)', 'has-a-heart-magic-school-bus', 'Anne Capeci', 'Anne Capeci', 5, 0, 'Education', 'assets/gallery/c1YMk7AcCK7x9Q1E5wfxogPR4JyKO8ULimp2VTLq.jpg', '2022-02-05 10:43:41', '2022-03-22 03:25:01'),
+(4, 'BK0004', NULL, 'Seribu Daun', 'seribu-daun', 'I Gusti Made Dwi Wiguna', 'I Gusti Made Dwi Wiguna', 3, 0, 'Dongeng', 'assets/gallery/cb3Sc5AlnCu424zicpiV7CItKJyANApOm7QrGI98.jpg', '2022-02-05 10:40:24', '2022-08-13 17:44:01'),
+(5, 'BK0005', '9780439684026', 'Has a Heart (Magic School Bus)', 'has-a-heart-magic-school-bus', 'Anne Capeci', 'Anne Capeci', 5, 1, 'Education', 'assets/gallery/c1YMk7AcCK7x9Q1E5wfxogPR4JyKO8ULimp2VTLq.jpg', '2022-02-05 10:43:41', '2022-08-13 18:01:50'),
 (6, 'BK0006', '9781407114644', 'Diplodocus', 'diplodocus', 'Helen Greathead', 'Helen Greathead', 4, 0, 'Encyclopedia', 'assets/gallery/LUxwLruOMLtGjCb0hsWkW55CODXkgeRBIaQp6bba.jpg', '2022-02-05 10:46:56', '2022-02-12 11:57:22'),
 (7, 'BK0007', '9781426320873', 'Weird But True 7: 300 Outrageous Facts', 'weird-but-true-7-300-outrageous-facts', 'National Geographic Children\'s Books', 'National Geographic Kids', 4, 0, 'Encyclopedia', 'assets/gallery/KripJQMvQSGlkOQsEzzDWvL6j4V1DIw7iZlJL2w0.jpg', '2022-02-05 10:50:21', '2022-02-13 09:30:46'),
 (8, 'BK0008', '9780714130378', 'Fantastic Mummies', 'fantastic-mummies', 'British Museum Pubns Ltd', 'John H. Taylor', 4, 1, 'Encyclopedia', 'assets/gallery/Yb53nuSko2nX22KI5REgle8V8BD4tAPWTjbHPBQb.jpg', '2022-02-05 10:52:34', '2022-03-11 11:00:20'),
@@ -68,10 +68,10 @@ INSERT INTO `books` (`id`, `kode_buku`, `isbn`, `judul`, `slug`, `penerbit`, `pe
 (18, 'BK0018', NULL, 'Twinkle, Twinkle, Little Star: Sing Along With Me!', 'twinkle-twinkle-little-star-sing-along-with-me', 'Nosy Crow', 'Yu-hsuan Huang', 5, 1, 'Education', 'assets/gallery/y4eIlUyNPHI6vHGO31c9lOjZ54Hq0FRclTgqWsUR.jpg', '2022-02-05 11:27:07', '2022-04-01 23:06:22'),
 (19, 'BK0019', NULL, 'Hello Pooh, Hello Piglet!', 'hello-pooh-hello-piglet', 'Methuen young books', 'A. A. Milne', 3, 1, 'Fairytale', 'assets/gallery/tr1MTxefQupwnKx5LNfGAyQGuut4g5gJbB5fZYqm.jpg', '2022-02-05 11:29:16', '2022-02-05 11:29:16'),
 (20, 'BK0020', NULL, 'Barney:Super Drum Songs', 'barneysuper-drum-songs', 'Publications International', 'Louis Weber', 5, 0, 'Education', 'assets/gallery/Gykh8qQem0V5ZYnAp3JUOH8ATvGwranI4LknQRPP.jpg', '2022-02-05 11:34:14', '2022-02-13 17:54:15'),
-(21, 'BK0021', NULL, 'All Because of a Cup of Coffee', 'all-because-of-a-cup-of-coffee', 'Scholastic', 'Geronimo Stilton', 6, 0, 'Fable', 'assets/gallery/dutT3S7IagkOTkeI8ttPPp5RZ2x1D4qtOXQtBRgt.jpg', '2022-02-05 11:38:29', '2022-03-17 03:18:14'),
+(21, 'BK0021', NULL, 'All Because of a Cup of Coffee', 'all-because-of-a-cup-of-coffee', 'Scholastic', 'Geronimo Stilton', 6, 1, 'Fable', 'assets/gallery/dutT3S7IagkOTkeI8ttPPp5RZ2x1D4qtOXQtBRgt.jpg', '2022-02-05 11:38:29', '2022-08-13 18:00:40'),
 (22, 'BK0022', NULL, 'The Mouse Island Marathon', 'the-mouse-island-marathon', 'Scholastic', 'Geronimo Stilton', 6, 1, 'Fable', 'assets/gallery/ntvqMyNYyPXjmUqgmKHGUxOSixKuU7H78npw8I7F.jpg', '2022-02-05 11:40:11', '2022-02-05 11:40:11'),
 (23, 'BK0023', NULL, 'Windy Day Fairy', 'windy-day-fairy', 'Brimax', 'Brimax', 3, 1, 'Fairytale', 'assets/gallery/tBqlwON29STCtFkq0ycJxOLXLiLYO9lh2LXcWqnM.jpg', '2022-02-05 11:42:29', '2022-03-12 11:35:47'),
-(24, 'BK0024', NULL, 'Horrible Histories Measly Middle Ages', 'horrible-histories-measly-middle-ages', 'Scholastic', 'Martin Brown', 5, 1, 'Education', 'assets/gallery/l2jxQCZoSl8Pra7ne6lk1CUtZ1wFLDo3w4M2LmAX.jpg', '2022-02-05 11:45:05', '2022-02-05 11:45:05'),
+(24, 'BK0024', NULL, 'Horrible Histories Measly Middle Ages', 'horrible-histories-measly-middle-ages', 'Scholastic', 'Martin Brown', 5, 0, 'Education', 'assets/gallery/l2jxQCZoSl8Pra7ne6lk1CUtZ1wFLDo3w4M2LmAX.jpg', '2022-02-05 11:45:05', '2022-08-13 17:21:58'),
 (25, 'BK0025', NULL, 'Doing My Own Thing - Endeavour Reading Programme Book 17', 'doing-my-own-thing-endeavour-reading-programme-book-17', 'AbeBooks', 'Laura Books', 2, 1, 'Novel', 'assets/gallery/PyXjca8k0mEbuchFGqwOsS25g1LngYruwdQUCivv.jpg', '2022-02-05 11:51:25', '2022-02-05 11:51:25'),
 (26, 'BK0026', NULL, 'Over 1000 Fantastic Earth Facts', 'over-1000-fantastic-earth-facts', 'Miles Kelly', 'Miles Kelly', 4, 1, 'Encyclopedia', 'assets/gallery/uG0sUzWhLu82LC7ClKWu2rs8PloxQp2hBaKrii49.jpg', '2022-02-05 11:55:38', '2022-03-12 11:35:40'),
 (27, 'BK0027', NULL, 'THE NEW BIG BROTHER', 'the-new-big-brother', 'Generic', 'Generic', 7, 0, 'Magazine', 'assets/gallery/6XJvfeUxwtuvzWaMlmy3eduApA4ELKQ6xy0s1BNU.jpg', '2022-02-05 11:58:44', '2022-03-22 03:24:45'),
@@ -99,7 +99,7 @@ INSERT INTO `books` (`id`, `kode_buku`, `isbn`, `judul`, `slug`, `penerbit`, `pe
 (49, 'BK0049', NULL, 'Shopaholic Takes Manhattan', 'shopaholic-takes-manhattan', 'Dell Book', 'Sophie Kinsella', 2, 1, 'Novel', 'assets/gallery/zbFopk2oSLHvfXJkHG5CGpJJUe2Fs8upEwOkiWXF.jpg', '2022-02-05 13:09:42', '2022-02-05 13:09:42'),
 (50, 'BK0050', NULL, 'Tiga Manula Jalan-Jalan ke Selatan Jawa', 'tiga-manula-jalan-jalan-ke-selatan-jawa', 'Kepustakaan Populer Gramedia', 'Benny Rachmadi', 1, 1, 'Comic', 'assets/gallery/Jz2U3Sja6TOa7B7RF2nG9oRxor6XDCH0F7pKEFF4.jpg', '2022-02-05 13:11:52', '2022-02-05 13:11:52'),
 (51, 'BK0051', NULL, 'Watch Out, Big Bro\'s Coming', 'watch-out-big-bros-coming', 'Paw Prints', 'Jez Alborough', 6, 1, 'Fable', 'assets/gallery/HO8uIEhMkrENJe2AqCrgvdghR9lqv4w36ZJY8VZW.jpg', '2022-02-05 13:13:34', '2022-02-05 13:13:34'),
-(52, 'BK0052', NULL, 'Oh, Say Can You Say?', 'oh-say-can-you-say', 'Random House Books for Young Readers', 'Dr. Seuss', 6, 0, 'Fable', 'assets/gallery/nOHYXqhqYYeG9nqlZnQ40HPivVv1ztVWM0nzq02C.jpg', '2022-02-05 13:15:36', '2022-03-20 18:34:41'),
+(52, 'BK0052', NULL, 'Oh, Say Can You Say?', 'oh-say-can-you-say', 'Random House Books for Young Readers', 'Dr. Seuss', 6, 1, 'Fable', 'assets/gallery/nOHYXqhqYYeG9nqlZnQ40HPivVv1ztVWM0nzq02C.jpg', '2022-02-05 13:15:36', '2022-08-13 18:00:53'),
 (53, 'BK0053', NULL, 'A Silly Snowy Day', 'a-silly-snowy-day', 'Scholastic', 'Michael Coleman', 6, 1, 'Fable', 'assets/gallery/rSTdYb3SkOlgFJ8iz3Y7gI1rHgAuQ9v5M0gVzd78.jpg', '2022-02-05 13:17:09', '2022-02-05 13:17:09'),
 (54, 'BK0054', NULL, 'Harry Potter', 'harry-potter', 'Gramedia', 'J.K Rowling', 2, 2, 'Novel', 'assets/gallery/Q7ee6jjDNyMGg3HFQ8CpJ6bL9LD2JO8Ds8B0N30z.jpg', '2022-02-07 11:17:57', '2022-02-07 11:18:22'),
 (55, 'BK0055', NULL, 'Naruto Shippuden', 'naruto-shippuden', 'Gramedia', 'Masashi Kishimoto', 1, 2, 'Komik', 'assets/gallery/TUq38jMWxBXD4w2UYgjG8F7DpXvX8iczsi4DFYoZ.jpg', '2022-02-08 01:00:50', '2022-02-08 01:00:50'),
@@ -115,8 +115,8 @@ INSERT INTO `books` (`id`, `kode_buku`, `isbn`, `judul`, `slug`, `penerbit`, `pe
 (65, 'BK0065', NULL, 'Thor Junior Novel', 'thor-junior-novel', 'Marvel Press', 'Elizabeth Rudnick', 2, 1, 'Novel', 'assets/gallery/Molq3QQWZCk4yDeABx1ZFTL4u5ad0mzdE8VpIKfC.jpg', '2022-02-08 02:56:17', '2022-02-08 02:56:17'),
 (66, 'BK0066', NULL, 'I Can Tell the Time', 'i-can-tell-the-time', 'World International Publishing', 'Glynis Langley', 3, 1, 'Fairytale', 'assets/gallery/tdLfRWFFGCNpCZVB1Fpjc0GlXzz4m070yCyMCwDC.jpg', '2022-02-08 02:59:55', '2022-02-08 02:59:55'),
 (67, 'BK0067', '9782211071611', 'Alice racontee aux petits', 'alice-racontee-aux-petits', 'EDL', 'Lewis Carroll', 2, 1, 'Novel', 'assets/gallery/KhkSykiH545LmzVRnrESnlhUBAwMwC0jqGxssrC8.jpg', '2022-02-08 03:01:46', '2022-02-08 03:02:53'),
-(68, 'BK0068', NULL, 'Caperucita Roja', 'caperucita-roja', 'TODOLIBRO', 'Equipo de Todolibro', 3, 0, 'Fairytale', 'assets/gallery/bev4UJZ6j5cuN4fXHexUs6h22V1xA5OaobKfE8MT.jpg', '2022-02-08 03:07:31', '2022-03-22 03:48:25'),
-(69, 'BK0069', '9782013943468', 'TIM DETECTIVE', 'tim-detective', 'DEUX COQS D OR', 'Pierre Probst', 6, 1, 'Fable', 'assets/gallery/mAu0VYet9IE10cJXkrTbfZgwd0Put6K6mizm5dTZ.jpg', '2022-02-08 03:09:06', '2022-02-08 03:09:44'),
+(68, 'BK0068', NULL, 'Caperucita Roja', 'caperucita-roja', 'TODOLIBRO', 'Equipo de Todolibro', 3, 1, 'Fairytale', 'assets/gallery/bev4UJZ6j5cuN4fXHexUs6h22V1xA5OaobKfE8MT.jpg', '2022-02-08 03:07:31', '2022-08-13 18:02:01'),
+(69, 'BK0069', '9782013943468', 'TIM DETECTIVE', 'tim-detective', 'DEUX COQS D OR', 'Pierre Probst', 6, 1, 'Fable', 'assets/gallery/mAu0VYet9IE10cJXkrTbfZgwd0Put6K6mizm5dTZ.jpg', '2022-02-08 03:09:06', '2022-08-13 18:04:41'),
 (70, 'BK0070', NULL, 'Beast Quest 31 : Komodo the Lizard King', 'beast-quest-31-komodo-the-lizard-king', 'Orchard Books', 'Adam Blade', 2, 1, 'Novel', 'assets/gallery/taoc7FYrMSprXZYAlWo9I7UWl10j0MtXj4rmVt7a.jpg', '2022-02-08 03:12:24', '2022-02-08 03:12:24'),
 (71, 'BK0071', '97800088164621', 'The Midnight Gang', 'the-midnight-gang', 'HarperCollins', 'David Walliams', 2, 1, 'Novel', 'assets/gallery/78bmvof3r9FaP1TwPZKPgkuLaOyKdiLOvRCjlSKS.jpg', '2022-02-08 03:16:44', '2022-02-08 03:16:44'),
 (72, 'BK0072', '978-1442482357', 'Your Worst Nightmare : (You\'re Invited to a Creepover Book 17)', 'your-worst-nightmare-youre-invited-to-a-creepover-book-17', 'Simon Spotlight', 'P. J. Night', 2, 1, 'Novel', 'assets/gallery/74WngD1eshnRXZrhEWEnfWgC5EwacAeYnXYynk1V.jpg', '2022-02-08 03:19:35', '2022-02-08 03:19:35'),
@@ -126,7 +126,7 @@ INSERT INTO `books` (`id`, `kode_buku`, `isbn`, `judul`, `slug`, `penerbit`, `pe
 (76, 'BK0076', '9780989348027', 'Alistair The Armadillo', 'alistair-the-armadillo', 'Armadillo Press Children', 'Mike Brumby', 6, 1, 'Fable', 'assets/gallery/f0sjC8KHvV0jj2ahiIRUB126WdXkhpgA84kugiIy.jpg', '2022-02-08 03:35:30', '2022-02-08 03:35:30'),
 (77, 'BK0077', '9782745927262', 'Dans la cour de l\'école', 'dans-la-cour-de-lecole', 'MILAN', 'Christophe Loupy', 5, 1, 'Education', 'assets/gallery/sney1QyAuqVez0EquYe4bE59KdG2irzcBdQA4yRb.jpg', '2022-02-08 03:38:03', '2022-02-08 03:38:03'),
 (78, 'BK0078', NULL, 'Maisy\'s World of Animals', 'maisys-world-of-animals', 'Candlewick', 'Lucy Cousins', 4, 1, 'Encyclopedia', 'assets/gallery/q1zoK3PCkdLJXHJFdCspLlJ6lLAyMmAA3zuxgMq4.jpg', '2022-02-08 03:41:38', '2022-02-08 03:41:38'),
-(79, 'BK0079', '9781583241141', 'My Desktop Dictionary', 'my-desktop-dictionary', 'World Teachers Press', 'World Teachers Press', 5, 0, 'Education', 'assets/gallery/th0FdeAKrhsnVsj6yv9LmRMOZSZF6B2XffD6dUVn.jpg', '2022-02-08 03:43:09', '2022-03-23 02:34:58'),
+(79, 'BK0079', '9781583241141', 'My Desktop Dictionary', 'my-desktop-dictionary', 'World Teachers Press', 'World Teachers Press', 5, 1, 'Education', 'assets/gallery/th0FdeAKrhsnVsj6yv9LmRMOZSZF6B2XffD6dUVn.jpg', '2022-02-08 03:43:09', '2022-08-13 18:02:11'),
 (80, 'BK0080', '9781921502040', 'Zac\'s Wild Rescue', 'zacs-wild-rescue', 'Hardie Grant Egmont', 'H. I. Larry', 4, 1, 'Encyclopedia', 'assets/gallery/mJt5cVZsAuWMlfgCc47ffkVGxQiJEsBKN8LPqrjl.jpg', '2022-02-08 03:49:30', '2022-02-08 03:49:30'),
 (81, 'BK0081', '9781921417313', 'Zac Power: Volcanic Panic', 'zac-power-volcanic-panic', 'Hardie Grant Children\'s Publishing', 'H. I. Larry', 4, 1, 'Encyclopedia', 'assets/gallery/fUybPcipHzxPSSNaNbn1wOb0Hxl7e38LBIJFJIQC.jpg', '2022-02-08 03:53:34', '2022-02-08 03:53:34'),
 (82, 'BK0082', '9780545135702', 'The 39 Clues, Book 3: The Sword Thief', 'the-39-clues-book-3-the-sword-thief', 'Scholastic Audio', 'Peter Lerangis', 2, 1, 'Novel', 'assets/gallery/AM26EsFW4gisziwgwwYN2s3hvxzBzXaL1wVUpgSw.jpg', '2022-02-08 03:55:46', '2022-02-08 03:55:46'),
@@ -221,17 +221,8 @@ CREATE TABLE `loans` (
 --
 
 INSERT INTO `loans` (`id`, `kode_peminjaman`, `members_id`, `books_id`, `user_id`, `tgl_pinjam`, `tgl_pengembalian`, `keadaan`, `created_at`, `updated_at`) VALUES
-(30, 'LN0015', 21, 48, NULL, '2022-03-17', '2022-03-24', 'Dikembalikan', '2022-03-16 23:57:02', '2022-03-22 03:27:12'),
-(31, 'LN0016', NULL, 3, 7, '2022-03-18', '2022-03-25', 'Dikembalikan', '2022-03-17 00:05:01', '2022-03-23 02:35:33'),
-(32, 'LN0017', NULL, 18, 7, '2022-03-18', '2022-03-25', 'Dikembalikan', '2022-03-17 00:05:34', '2022-04-01 23:06:22'),
-(33, 'LN0018', 14, 4, NULL, '2022-03-18', '2022-03-25', 'Dipinjam', '2022-03-17 03:15:03', '2022-03-17 03:15:03'),
-(34, 'LN0019', NULL, 21, 7, '2022-03-18', '2022-03-25', 'Dipinjam', '2022-03-17 03:18:14', '2022-03-22 03:25:41'),
-(35, 'LN0020', NULL, 52, 12, '2022-03-21', '2022-03-28', 'Dipinjam', '2022-03-20 18:34:41', '2022-03-23 02:35:19'),
-(36, 'LN0021', 29, 27, NULL, '2022-03-22', '2022-03-29', 'Dipinjam', '2022-03-22 03:24:45', '2022-03-22 03:24:45'),
-(37, 'LN0022', 2, 5, NULL, '2022-03-22', '2022-03-29', 'Dipinjam', '2022-03-22 03:25:00', '2022-03-22 03:25:00'),
-(38, 'LN0023', NULL, 68, 7, '2022-03-22', '2022-03-29', 'Sedang diproses', '2022-03-22 03:48:25', '2022-03-22 03:48:25'),
-(39, 'LN0024', 19, 79, NULL, '2022-03-23', '2022-03-30', 'Dipinjam', '2022-03-23 02:34:58', '2022-03-23 02:34:58'),
-(40, 'LN0025', NULL, 1, 7, '2022-04-02', '2022-04-09', 'Dipinjam', '2022-04-01 22:49:25', '2022-04-01 23:05:43');
+(42, 'LN0027', NULL, 69, 7, '2022-08-14', '2022-08-21', 'Dikembalikan', '2022-08-13 17:43:48', '2022-08-13 18:04:41'),
+(43, 'LN0028', NULL, 4, 7, '2022-08-14', '2022-08-21', 'Dipinjam', '2022-08-13 17:44:01', '2022-08-13 18:10:54');
 
 -- --------------------------------------------------------
 
@@ -275,8 +266,7 @@ INSERT INTO `members` (`id`, `no_anggota`, `nama_anggota`, `jen_kel`, `status`, 
 (18, '20021107', 'Prama Dewastu', 'Laki-Laki', 'Siswa', 'TK', '089424347567', '2022-02-07 02:13:07', '2022-02-07 02:13:07'),
 (19, '204028429', 'Yu Jimin', 'Perempuan', 'Siswa', 'TK', '089186783987', '2022-02-08 00:58:52', '2022-02-08 00:59:25'),
 (20, '18035345345', 'Stephen Strange', 'Laki-Laki', 'Guru', 'SMP', '082485549054', '2022-02-12 11:44:17', '2022-02-12 11:45:52'),
-(21, '1108', 'I Made Muditha', 'Laki-Laki', 'Guru', NULL, '083344953448', '2022-02-25 04:48:14', '2022-02-25 04:48:14'),
-(29, '21040343', 'Christian Budiman', 'Laki-Laki', 'Siswa', 'SMP', '3432534534', '2022-03-22 02:55:52', '2022-03-22 02:55:52');
+(21, '1108', 'I Made Muditha', 'Laki-Laki', 'Guru', NULL, '083344953448', '2022-02-25 04:48:14', '2022-02-25 04:48:14');
 
 -- --------------------------------------------------------
 
@@ -355,9 +345,7 @@ CREATE TABLE `restores` (
 --
 
 INSERT INTO `restores` (`id`, `loans_id`, `tgl_kembali`, `status`, `created_at`, `updated_at`) VALUES
-(17, 30, '2022-03-22', 'Kembali', '2022-03-22 03:27:12', '2022-03-22 03:27:12'),
-(18, 31, '2022-03-23', 'Kembali', '2022-03-23 02:35:33', '2022-03-23 02:35:33'),
-(19, 32, '2022-04-02', 'Kembali', '2022-04-01 23:06:22', '2022-04-01 23:06:22');
+(27, 42, '2022-08-14', 'Kembali', '2022-08-13 18:04:41', '2022-08-13 18:04:41');
 
 -- --------------------------------------------------------
 
@@ -385,8 +373,9 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`, `roles`, `re
 (1, 'Admin', 'admin', 'admin@gmail.com', '$2y$10$nLKztZYlRSxZNcJSl2vyAeeqCyyIdHmpp8Bn2yWfDy7IjJCqsStRa', 'ADMIN', NULL, '2022-02-25 04:24:07', '2022-02-25 04:24:07'),
 (7, 'User', 'users', 'user@gmail.com', '$2y$10$x94RdyvY2/tzf8ZVf4rW7ey/Np6EzCJJA5/uiiNhLpsoxh2OjN4RW', 'USER', NULL, '2022-03-01 12:46:02', '2022-03-01 12:46:02'),
 (12, 'Akagami No Shanks', 'shanks', 'akagami@gmail.com', '$2y$10$uEgkVAyEySQeL3eNcJeviu.DehSP77jdR98iDr4/8th46TWylUNLO', 'USER', NULL, '2022-03-20 18:33:46', '2022-03-20 18:33:46'),
-(13, 'Diwantara', 'taraarts', 'diwantara@gmail.com', '$2y$10$rHZygQjzW.bvHhaYwFwAMug5Hc8pnNuNTvF9H.Td3Br.dOm3CJJJe', 'USER', NULL, '2022-03-22 02:42:14', '2022-03-22 02:42:14'),
-(15, 'tok', 'tongkat', 'genusepalios@gmail.com', '$2y$10$4l242ShSnsbucH5poWyB9OKJgU22s3H.XbFDBZZv.CnsizuLebE1e', 'USER', NULL, '2022-04-01 22:52:41', '2022-04-01 22:52:41');
+(15, 'tok', 'tongkat', 'genusepalios@gmail.com', '$2y$10$4l242ShSnsbucH5poWyB9OKJgU22s3H.XbFDBZZv.CnsizuLebE1e', 'USER', NULL, '2022-04-01 22:52:41', '2022-04-01 22:52:41'),
+(16, 'Admin', 'admin2', 'admin2@gmail.com', '$2y$10$Kq6CQ4y2ne95JXaEdahtWeiagiQNYj3wKPYiPRZRdPRCBMgrB41lu', 'ADMIN', NULL, '2022-08-13 16:46:02', '2022-08-13 16:46:02'),
+(17, 'Putu Goku', 'goku11', 'goku@gmail.com', '$2y$10$4y5ghqzne8w9ZsT53MP0FOlpFM350kUA2PKk6Et4feEz4i5iT9aKy', 'USER', NULL, '2022-08-14 17:40:17', '2022-08-14 17:40:17');
 
 --
 -- Indexes for dumped tables
@@ -474,13 +463,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -492,13 +481,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `loans`
 --
 ALTER TABLE `loans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -516,13 +505,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `restores`
 --
 ALTER TABLE `restores`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
